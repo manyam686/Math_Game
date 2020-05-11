@@ -1,18 +1,20 @@
 <?php
 
 require_once('nrgame.php');
+require_once('config.php');
+require_once('files.php');
 //get info passed by last page
 $arr = prepare_query_string();
 //if correct method, check answer
 if($arr['method']==1){
-    check_answer($arr['answer']);
+    check_answer($arr['answer'], $arr['username']);
 }
 
 //check answer and redirect appropriately
-function check_answer($right_answer){
+function check_answer($right_answer, $username){
     session_start();
-    //TODO update database: num_problems_attempted++
-    //increase total question count by 1
+
+    increment_num_probs_attempted(PROGRESSFILE, $username);
     if(isset($_SESSION['total'])){
         $_SESSION['total']++;
     }
@@ -31,7 +33,7 @@ function check_answer($right_answer){
         $user_answer="ones";
     }
     if($user_answer==$right_answer){
-      //TODO update the database: correct_answers++
+      increment_num_probs_correct(PROGRESSFILE, $username);
     //increase correct question count by 1
         if(isset($_SESSION['correct'])){
             $_SESSION['correct']++;
@@ -46,7 +48,7 @@ function check_answer($right_answer){
         }
         else{
             $_SESSION['correct']=0; //reset to zero once game ends
-            //TODO update database: num_games_won++
+            increment_num_games_won(PROGRESSFILE, $username);
             header("Location: won_game.php");
         }
 
