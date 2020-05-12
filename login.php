@@ -35,7 +35,7 @@
 	}
 	</style>
 	<form action="check_login.php" method="post" id="login_info">
-		<h2>Welcome to Math Game</h2>
+		<h2>Welcome to Burger Math</h2>
 		<tag class="label">Userame:</tag>
 		<input type="text" name="username" id="username" class="box" placeholder="Name" />
 		<br/><br/>

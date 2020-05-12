@@ -24,7 +24,7 @@
 		echo <<<_END
 		<div id="welcome">
 			<br><br>
-			Welcome to Math Game, $username
+			Welcome to Burger Math, $username
 			<br>
 			<img src="goodburger10.png">
 		<div>
