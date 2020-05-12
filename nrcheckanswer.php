@@ -41,6 +41,7 @@ function check_answer($right_answer, $username){
         else{
             $_SESSION['correct']=1;
         }
+        $_SESSION['fry_image']++;
     //go to correct answer page if haven't won, or to win screen if have
 
         if($_SESSION['correct']<POINTS_TO_WIN){

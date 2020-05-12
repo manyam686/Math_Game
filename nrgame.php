@@ -4,6 +4,15 @@
 
     global $num_probs;
     global $current_answer;
+
+    $fries_images = array();
+    $fries_images[] = "fries0.png";
+    $fries_images[] = "fries1.png";
+    $fries_images[] = "fries2.png";
+    $fries_images[] = "fries3.png";
+    $fries_images[] = "fries4.png";
+    $fries_images[] = "fries5.png";
+
     //get problems from file and store in array
     function get_problems(){
         global $num_probs;
