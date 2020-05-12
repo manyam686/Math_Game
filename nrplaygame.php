@@ -29,9 +29,9 @@ echo <<<_END
 	</div>
 	<br>
 	<form action="nrcheckanswer.php?method=1&answer=$current_answer&username=$user" method="post" class="center_text">
-    	<input type="submit" name="hundreds" id="hundreds" value="hundreds" />
-		<input type="submit" name="tens" id="tens" value="tens" />
-		<input type="submit" name="ones" id="ones" value="ones" />
+    	<input type="submit" name="hundreds" id="button" value="hundreds" />
+		<input type="submit" name="tens" id="button" value="tens" />
+		<input type="submit" name="ones" id="button" value="ones" />
 	</form>
 _END;
 ?>

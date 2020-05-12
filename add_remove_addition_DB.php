@@ -50,8 +50,11 @@ elseif (isset($_POST['remove_problem'])){
 	else {
 		echo "successfully removed problem";
 		//get rid of the line
+		//$line=$firstnumber." ".$secondnumber." ".$sum;
+		//echo "<br>".$fileContents;
 		$replace = "";
-	str_replace($line, $replace, $fileContents);
+		$fileContents = str_replace($line, $replace, $fileContents);
+		//echo "<br>".$fileContents;
 		//overwrite the old file
 		file_put_contents($fileName, $fileContents);
 	}
