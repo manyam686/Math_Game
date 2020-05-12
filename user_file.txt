@@ -5,3 +5,6 @@ sarah 123 student
 teach 123 teacher
 manyam 12345 teacher
 sam sam student
+testo 123 teacher
+test 123 student
+matt 123 student

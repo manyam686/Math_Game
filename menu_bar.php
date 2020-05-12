@@ -116,6 +116,7 @@
 ?>
 <?php
     //echo $_SESSION['user_type'];
+
     if($_SESSION['user_type'] == "teacher"){
         echo <<<_END
         <li class="m2">

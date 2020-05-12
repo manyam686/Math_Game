@@ -1,0 +1,3 @@
+43 3 Ones
+475 7 Tens
+342 2 ones

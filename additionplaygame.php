@@ -4,16 +4,22 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-
 <?php
 
 require_once("menu_bar.php");
-//pick and print a problem, record correct answer
 require_once('additiongame.php');
 $current_problem = pick_problem();
+
+
+require_once 'config.php';
+require_once 'files.php';
+$user = $_SESSION["username"];
+$userType = $_SESSION["user_type"];
+
 session_start();
 if(!isset($_SESSION['burger_image'])){
 	$_SESSION['burger_image']=0;
+	add_new_progress_info(ADDPROGRESSFILE,$user,$userType);
 }
 $current_image = $_SESSION['burger_image'];
 
@@ -23,8 +29,8 @@ echo <<<_END
 	<div class="center_text" id="math_problem">
 		$current_problem
 	</div>
-	<form action="additioncheckanswer.php?method=1&answer=$current_answer" method="post" class="center_text">
-    	<input type="text" id="textbox" name="digitplace">
+	<form action="additioncheckanswer.php?method=1&answer=$current_answer&username=$user" method="post" class="center_text">
+			<input type="text" id="textbox" name="digitplace">
     	<input type="submit" id="button">
 	</form>
 	<br>

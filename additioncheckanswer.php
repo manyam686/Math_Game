@@ -1,16 +1,20 @@
 <?php
 
 require_once('additiongame.php');
+require_once('config.php');
+require_once('files.php');
 //get info passed by last page
 $arr = prepare_query_string();
 //if correct method, check answer
 if($arr['method']==1){
-    check_answer($arr['answer']);
+    check_answer($arr['answer'], $arr['username']);
 }
 
 //check answer and redirect appropriately
-function check_answer($right_answer){
+function check_answer($right_answer, $username){
     session_start();
+
+    increment_num_probs_attempted(ADDPROGRESSFILE, $username);
     //increase total question count by 1
     if(isset($_SESSION['add_total'])){
         $_SESSION['add_total']++;
@@ -21,6 +25,7 @@ function check_answer($right_answer){
     //extract user answer
     $user_answer= $_POST["digitplace"];
     if($user_answer==$right_answer){
+      increment_num_probs_correct(ADDPROGRESSFILE, $username);
     //increase correct question count by 1
         if(isset($_SESSION['add_correct'])){
             $_SESSION['add_correct']++;
@@ -35,6 +40,7 @@ function check_answer($right_answer){
             header("Location: addition_right_answer.php");
         }
         else{
+          increment_num_games_won(ADDPROGRESSFILE, $username);
             header("Location: addition_won_game.php");
         }
 
