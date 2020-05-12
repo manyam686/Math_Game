@@ -1,1 +1,4 @@
-username date number_probs_attempted number_probs_correct
+sarah student 2020-05-10 1111 0 0;
+sarah student 2020-05-11 11 10 1;
+sophia student 1980-09-13 1 1 0;
+sarah student 2020-05-12 1 0 0;teach teacher 2020-05-12 1 1 0;

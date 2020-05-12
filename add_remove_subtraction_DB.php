@@ -14,7 +14,7 @@ $firstnumber=$_POST['firstnumber'];
 $secondnumber=$_POST['secondnumber'];
 $difference=$_POST['difference'];
 
-$line = "".$firstnumber." ".$secondnumber." ".$difference."\n";
+$line = "".$firstnumber." ".$secondnumber." ".$difference; 
 if (isset ($_POST['add_problem'])){
 	if ($firstnumber =="" or $secondnumber == "" or !isset($difference)){
 		echo "Incomplete problem information, please fill all fields and try again.";
@@ -38,7 +38,7 @@ if (isset ($_POST['add_problem'])){
 	else{
 		//add the line to the contents of the file
 		echo "Success!";
-		$fileContents .= $line;
+		$fileContents .= $line."\n";;
 		//overwrite the old file
 		file_put_contents($fileName, $fileContents);
 	}
@@ -55,10 +55,12 @@ elseif (isset($_POST['remove_problem'])){
 	}
 	//if we get here, we should remove it.
 	else {
+		echo "successfully removed a problem";
 		//get rid of the line
-		//str_replace($line, "", $fileContents, 1);
+		$replace = "";
+		str_replace($line, $replace, $fileContents);
 		//overwrite the old file
-		//file_put_contents($fileName, $fileContents);
+		file_put_contents($fileName, $fileContents);
 	}
 
 }

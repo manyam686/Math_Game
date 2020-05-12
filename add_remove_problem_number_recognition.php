@@ -6,6 +6,9 @@
 
 	</head>
 <body>
+	<?php
+    require_once "menu_bar.php";
+    ?>
 	<form action="Number_Recognition_Add_Remove_Edit_DB.php" method="post" id="form_id">
 		<h2>Add/Remove Number Recognition Problem</h2>
 
@@ -16,7 +19,7 @@
 		Digit:
 		<input type="number" name="digit" id="digit" placeholder="x" /><br/><br/>
 
-		Place: 
+		Place:
 		<input type="radio" name="place" id="One" value="Ones">
 		<label for="ones">Ones</label>
 		<input type="radio" name="place" id="Tens"  value="Tens">

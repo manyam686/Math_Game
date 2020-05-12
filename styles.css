@@ -1,0 +1,38 @@
+.body_font{
+    font-family: Arial;
+    font-size: 25px;
+}
+
+.center_image{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+.center_text{
+	text-align: center;
+    font-family: Arial;
+    font-size: 45px;
+}
+#problem{
+	width:400px;
+	margin: 0px 0px 0px 700px;
+	text-align: right;
+}
+
+#button{
+	background-color:#FBA90A;
+	padding: 10px;
+	font-size: 25px;
+    font-family: Arial;
+}
+#textbox{
+	font-size: 25px;
+    font-family: Arial;
+	width: 100px;
+}
+#math_problem{
+    text-align: center;
+    font-size: 45px;
+    font-family: Arial;
+}

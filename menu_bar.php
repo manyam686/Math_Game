@@ -15,22 +15,27 @@
 
         body{
             /*More font: https://www.tutorialbrain.com/css_tutorial/css_font_family_list/*/
-            font-family: Gill Sans;
+            font-family: Arial;
+            background-color: #F7DAD4;
         }
 
         ul li ul{
             /*Place the element exactly where your want it*/
             position: absolute;
             display: none; /*Hidden Secondary menu*/
-            background: white; /*Set background to white*/
-            border-style: solid; /*more styles: https://www.w3schools.com/cssref/pr_border-style.asp*/
-            border-color: hotpink; /*after border-style*/
-            border-radius: 5px;
+            background: #FD3A0F; /*Set background to white*/
+            /*border-style: solid; /*more styles: https://www.w3schools.com/cssref/pr_border-style.asp*/
+            /*border-color: hotpink; /*after border-style*/
+            /*border-radius: 5px;*/
+            font-family:Impact;
+
 
         }
 
         ul li ul li{
             display:block; /*in different line*/
+            font-family:Impact;
+            background-color:#236AB9;
         }
 
         ul li:hover ul{
@@ -38,6 +43,8 @@
         }
         ul li{
             display: inline-block; /*Display in one line*/
+            font-family:Impact;
+            /*background-color: #236AB9;*/
         }
 
         .m2 {
@@ -57,18 +64,23 @@
         }
 
         .link2:hover{
-            background: cyan;
+            background: #FBA90A;
         }
 
 
         a:hover{
-            border-radius: 5px;/*round corner*/
-            background-color: #ff5000; /*red*/
+            /*border-radius: 5px;/*round corner*/
+            background-color: #FBA90A; /*red*/
         }
 
         /*Dispaly second menu*/
         .link li:hover ul{
             display: block;
+        }
+
+        #menubackground{
+            width: 100%;
+            background-color: #236AB9;
         }
 
     </style>
@@ -84,27 +96,27 @@
     //Hidden warning, notice info
     //error_reporting(E_ERROR | E_PARSE);
     echo <<<_END
-        <li id = "m1">
-            <a href="./welcome.php?user=$_SESSION[username]" class="link">Home</a>
-        </li>
-        </li>
-        <li class="m2">
-            <a href="./number_recognition.php?user=$_SESSION[username]" class="link">Number Recognition Game</a>
-        </li>
-        </li>
-        <li class="m2">
-            <a href="./addition.php?user=$_SESSION[username]" class="link">Addition Game</a>
-        </li>
-        </li>
-        <li class="m2">
-            <a href="./subtraction.php?user=$_SESSION[username]" class="link">Subtraction Game</a>
-        </li>
-
+            <li id = "m1">
+                <a href="./welcome.php?user=$_SESSION[username]" class="link">Home</a>
+            </li>
+            </li>
+            <li class="m2">
+                <a href="./number_recognition.php?user=$_SESSION[username]" class="link">Number Recognition Game</a>
+            </li>
+            </li>
+            <li class="m2">
+                <a href="./addition.php?user=$_SESSION[username]" class="link">Addition Game</a>
+            </li>
+            </li>
+            <li class="m2">
+                <a href="./subtraction.php?user=$_SESSION[username]" class="link">Subtraction Game</a>
+            </li>
         _END;
 
 ?>
 <?php
     //echo $_SESSION['user_type'];
+
     if($_SESSION['user_type'] == "teacher"){
         echo <<<_END
         <li class="m2">

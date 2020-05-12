@@ -6,6 +6,9 @@
 
 	</head>
 <body>
+    <?php
+    require_once "menu_bar.php";
+    ?>
   <form action="add_remove_addition_DB.php" method="post" id="form_id">
     <h2>Add/Remove Addition Problem</h2>
 

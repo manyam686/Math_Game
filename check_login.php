@@ -27,6 +27,9 @@ if (isset($_POST['login'])) {
 			// echo "account type: ".$account_type."\n";
 
 			#If username or password doesn't exist, automatically set $re to 2 or 3
+
+
+
 			if ($username == ""){
 				$re = $bad_username;
 			}
@@ -44,8 +47,8 @@ if (isset($_POST['login'])) {
 				/*Redirect browser*/
 				my_session_start();
 				$_SESSION['username'] = $username;
-				#$all_user = get_user_info(USERFILE, USERFILEKEY);
 				$_SESSION['user_type'] = $account_type;
+				#$all_user = get_user_info(USERFILE, USERFILEKEY);
 				header("Location: welcome.php?user=$username");
 
 			}else{
@@ -106,6 +109,7 @@ function checkLogin($name, $pw, $type){
 	$bad_password = 3;
 	$bad_account_type = 4;
 
+
 	$all_user = get_user_info(USERFILE);
 
 		if (array_key_exists($name, $all_user)){
@@ -114,6 +118,8 @@ function checkLogin($name, $pw, $type){
 			if ($pw == $correct_password){
 				//correct password
 				$correct_type = rtrim($all_user[$name]['type']);
+
+
 				if ($type == $correct_type){
 					//correct account type (teacher or student)
 					return $correct_login;
@@ -134,5 +140,6 @@ function checkLogin($name, $pw, $type){
 		}
 
 }
+
 
 ?>

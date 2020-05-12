@@ -1,27 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <style type="text/css">
-    .center{
-    	display: block;
-    	margin-left: auto;
-    	margin-right: auto;
-    	width: 50%;
-    }
-    .center_text{
-    	text-align: center;
-    }
-    #button{
-        width:400px;
-        margin:auto;
-        text-align: center;
-    }
-    </style>
-    <br><br><br>
-    <div class="center_text">You won!</div>
+
 <?php
+require_once("menu_bar.php");
 require_once("subtractiongame.php");
 session_start();
 $current_image = $_SESSION['burger_image_sub'];
@@ -29,8 +14,10 @@ unset($_SESSION['sub_correct']);
 unset($_SESSION['burger_image_sub']);
 unset($_SESSION['sub_total']);
 echo <<<_END
+    <br><br><br>
+    <div class="center_text">You won!</div>
     <br>
-    <img class="center" src=$burger_images[$current_image] width=300 height=$burger_height[$current_image]>
+    <img class="center_image" src=$icecream_images[$current_image] width=100 height=$icecream_height[$current_image]>
     <br>
 _END;
 ?>
