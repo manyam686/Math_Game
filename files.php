@@ -215,7 +215,7 @@ function student_get_progress($username){
 				echo "Number of problems attempted: ".$single_entry[3]."<br>";
 				$percent_correct = ($single_entry[4]/$single_entry[3]) * 100;
 				echo "Accuracy: ".$percent_correct."%<br>";
-				echo "Number of games won: ".$single_entry[5]."<br>";
+				echo "Number of games won: ".$single_entry[5]."<br><br>";
 				$progress = true;
 				// print_r($single_entry);
 			}
@@ -246,7 +246,7 @@ function student_get_progress($username){
 				echo "Number of problems attempted: ".$single_entry[3]."<br>";
 				$percent_correct = ($single_entry[4]/$single_entry[3]) * 100;
 				echo "Accuracy: ".$percent_correct."%<br>";
-				echo "Number of games won: ".$single_entry[5]."<br>";
+				echo "Number of games won: ".$single_entry[5]."<br><br>";
 				$progress = true;
 				// print_r($single_entry);
 			}
@@ -277,7 +277,7 @@ function student_get_progress($username){
 				echo "Number of problems attempted: ".$single_entry[3]."<br>";
 				$percent_correct = ($single_entry[4]/$single_entry[3]) * 100;
 				echo "Accuracy: ".$percent_correct."%<br>";
-				echo "Number of games won: ".$single_entry[5]."<br>";
+				echo "Number of games won: ".$single_entry[5]."<br><br>";
 				$progress = true;
 				// print_r($single_entry);
 			}
@@ -348,7 +348,7 @@ function helper_teacher_get_progress($username){
 				echo "Number of problems attempted: ".$single_entry[3]."<br>";
 				$percent_correct = ($single_entry[4]/$single_entry[3]) * 100;
 				echo "Accuracy: ".$percent_correct."%<br>";
-				echo "Number of games won: ".$single_entry[5]."<br>";
+				echo "Number of games won: ".$single_entry[5]."<br><br>";
 				$progress = true;
 				// print_r($single_entry);
 		}
@@ -377,7 +377,7 @@ function helper_teacher_get_progress($username){
 				echo "Number of problems attempted: ".$single_entry[3]."<br>";
 				$percent_correct = ($single_entry[4]/$single_entry[3]) * 100;
 				echo "Accuracy: ".$percent_correct."%<br>";
-				echo "Number of games won: ".$single_entry[5]."<br>";
+				echo "Number of games won: ".$single_entry[5]."<br><br>";
 				$progress = true;
 				// print_r($single_entry);
 
@@ -407,7 +407,7 @@ function helper_teacher_get_progress($username){
 				echo "Number of problems attempted: ".$single_entry[3]."<br>";
 				$percent_correct = ($single_entry[4]/$single_entry[3]) * 100;
 				echo "Accuracy: ".$percent_correct."%<br>";
-				echo "Number of games won: ".$single_entry[5]."<br>";
+				echo "Number of games won: ".$single_entry[5]."<br><br>";
 				$progress = true;
 				// print_r($single_entry);
 		}
