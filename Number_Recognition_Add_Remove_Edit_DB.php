@@ -13,7 +13,7 @@ extract($_POST);
 $number=$_POST['number'];
 $digit=$_POST['digit'];
 $place=strtolower($_POST['place']);
-$line = "".$number." ".$digit." ".$place."\n";
+$line = $number." ".$digit." ".$place."\n";
 if (isset ($_POST['add_problem'])){
 	if ($number =="" or $digit == "" or !isset($place)){
 		echo "Incomplete problem information, please fill all fields and try again.";

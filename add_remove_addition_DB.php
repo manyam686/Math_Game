@@ -13,7 +13,7 @@ extract($_POST);
 $firstnumber=$_POST['firstnumber'];
 $secondnumber=$_POST['secondnumber'];
 $sum=$_POST['sum'];
-$line = "".$firstnumber." ".$secondnumber." ".$sum."\n";
+$line = $firstnumber." ".$secondnumber." ".$sum."\n";
 if (isset ($_POST['add_problem'])){
 	if ($firstnumber =="" or $secondnumber == "" or !isset($sum)){
 		echo "Incomplete problem information, please fill all fields and try again.";

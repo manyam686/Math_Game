@@ -14,7 +14,7 @@ $firstnumber=$_POST['firstnumber'];
 $secondnumber=$_POST['secondnumber'];
 $difference=$_POST['difference'];
 
-$line = "".$firstnumber." ".$secondnumber." ".$difference;
+$line = $firstnumber." ".$secondnumber." ".$difference;
 if (isset ($_POST['add_problem'])){
 	if ($firstnumber =="" or $secondnumber == "" or !isset($difference)){
 		echo "Incomplete problem information, please fill all fields and try again.";
