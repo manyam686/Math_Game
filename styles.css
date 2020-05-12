@@ -9,11 +9,18 @@
 	margin-right: auto;
 
 }
+
 .center_text{
 	text-align: center;
     font-family: Arial;
     font-size: 45px;
 }
+
+.label{
+    font-family: Arial;
+    font-size: 35px;
+}
+
 #problem{
 	width:400px;
 	margin: 0px 0px 0px 700px;
@@ -26,13 +33,20 @@
 	font-size: 25px;
     font-family: Arial;
 }
+
 #textbox{
 	font-size: 25px;
     font-family: Arial;
 	width: 100px;
 }
+
 #math_problem{
     text-align: center;
     font-size: 45px;
     font-family: Arial;
+}
+
+#header{
+    font-family: Arial;
+    font-size: 45px;
 }

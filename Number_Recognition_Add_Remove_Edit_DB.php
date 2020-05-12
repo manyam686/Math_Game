@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Add/Remove Problem</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
 <?php
 require_once "menu_bar.php";
 echo "<pre>";
@@ -16,40 +24,62 @@ $place=strtolower($_POST['place']);
 $line = $number." ".$digit." ".$place."\n";
 if (isset ($_POST['add_problem'])){
 	if ($number =="" or $digit == "" or !isset($place)){
-		echo "Incomplete problem information, please fill all fields and try again.";
+		echo <<<_END
+			<br><br><br><br><br><br><br><br><br>
+			<div class="center_text">Error: Incomplete problem information, please fill all fields and try again.</div>
+		_END;
 		header("refresh:3; url=add_remove_problem_number_recognition.php");
 	}
 	//if we get here, that means that all fields are entered
 	elseif (strpos($fileContents, ($line)) !== false){
-		echo "Problem already exists in problem set!";
+		echo <<<_END
+			<br><br><br><br><br><br><br><br><br>
+			<div class="center_text">Error: Problem already exists in problem set.</div>
+		_END;
+		header("refresh:3; url=add_remove_problem_number_recognition.php");
 	}
 	//if we get
 	else {
 		//add the line to the contents of the file
-		echo "success";
+		echo <<<_END
+			<br><br><br><br><br><br><br><br><br>
+			<div class="center_text">Success!</div>
+		_END;
 		//echo $fileContents."<br>"."past";
 		$fileContents = $fileContents.$line;
 		//overwrite the old file
 		file_put_contents($fileName, $fileContents);
+		header("refresh:3; url= welcome.php");
 
 	}
 }
 elseif (isset($_POST['remove_problem'])){
 	if ($number =="" or $digit == "" or !isset($place)){
-		echo "Incomplete problem information, please fill all fields and try again.";
+		echo <<<_END
+			<br><br><br><br><br><br><br><br><br>
+			<div class="center_text">Error: Incomplete problem information, please fill all fields and try again.</div>
+		_END;
 		header("refresh:3; url=add_remove_problem_number_recognition.php");
 	}
 	//if we get here, that means that all fields are entered
 	elseif (strpos($fileContents, ($line)) == false){
-		echo "Problem does not exist in problem set, please try again.";
+		echo <<<_END
+			<br><br><br><br><br><br><br><br><br>
+			<div class="center_text">Error: Problem does not exist in problem set, please try again.</div>
+		_END;
+		header("refresh:3; url=add_remove_problem_number_recognition.php");
 	}
 	//if we get
 	else {
-		echo "successfully removed problem";
+		echo <<<_END
+			<br><br><br><br><br><br><br><br><br>
+			<div class="center_text">Successfully removed problem!</div>
+		_END;
 		//get rid of the line
 		$fileContents = str_replace($line, "", $fileContents);
 		//overwrite the old file
 		file_put_contents($fileName, $fileContents);
+		header("refresh:3; url= welcome.php");
 	}
 
 }
