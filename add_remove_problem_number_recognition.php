@@ -21,12 +21,13 @@
 		margin-right: auto;
     }
     .label{
-        font-family: Arial;
+        font-family: Rockwell;
         font-size: 25px;
     }
     h2{
-        font-family: Impact;
+        font-family: Rockwell;
         font-Size: 50px;
+		font-weight: 800;
     }
 	</style>
 	<br><br><br><br><br><br><br>

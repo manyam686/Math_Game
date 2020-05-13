@@ -25,8 +25,10 @@
 		<div id="welcome">
 			<br><br>
 			Welcome to Burger Math, $username
-			<br>
+			<br><br>
+			<img src="fries5.png" height=300 width=200>
 			<img src="goodburger10.png">
+			<img src="icecream4.png" height=300 width=175>
 		<div>
 		_END;
 

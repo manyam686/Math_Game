@@ -52,7 +52,7 @@
         }
 
         .m2 {
-            padding-left: 50px;
+            padding-left: 20px;
         }
 
         #logout{
@@ -89,6 +89,14 @@
 
         .menu{
             background-color: #236AB9;
+            padding: 10px;
+        }
+
+        #logo{
+            padding: 0;
+            margin: 0;
+            height: 30px;
+            display: inline-block;
         }
 
     </style>
@@ -105,19 +113,22 @@
     //error_reporting(E_ERROR | E_PARSE);
     echo <<<_END
             <li id = "m1">
+                <img src="logo.PNG" id="logo">
+            </li>
+            <li id = "m1">
                 <a href="./welcome.php?user=$_SESSION[username]" class="link">HOME</a>
             </li>
             </li>
             <li class="m2">
-                <a href="./number_recognition.php?user=$_SESSION[username]" class="link">NUMBER RECOGNITION GAME</a>
+                <a href="./number_recognition.php?user=$_SESSION[username]" class="link">NUMBER RECOGNITION</a>
             </li>
             </li>
             <li class="m2">
-                <a href="./addition.php?user=$_SESSION[username]" class="link">ADDITION GAME</a>
+                <a href="./addition.php?user=$_SESSION[username]" class="link">ADDITION</a>
             </li>
             </li>
             <li class="m2">
-                <a href="./subtraction.php?user=$_SESSION[username]" class="link">SUBTRACTION GAME</a>
+                <a href="./subtraction.php?user=$_SESSION[username]" class="link">SUBTRACTION</a>
             </li>
         _END;
 
