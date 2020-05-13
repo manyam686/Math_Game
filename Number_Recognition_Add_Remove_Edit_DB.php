@@ -39,6 +39,59 @@ if (isset ($_POST['add_problem'])){
 		header("refresh:3; url=add_remove_problem_number_recognition.php");
 	}
 	//if we get
+	elseif (strlen($number) > 3){
+		echo <<<_END
+			<br><br><br><br><br><br><br><br><br>
+			<div class="center_text">Error: Length of number must be less than four digits.</div>
+		_END;
+		header("refresh:3; url=add_remove_problem_number_recognition.php");
+	}
+	elseif (strlen($number) == 3){
+		if($place == "ones" && $digit !== $number[2]){
+			echo <<<_END
+			<br><br><br><br><br><br><br><br><br>
+			<div class="center_text">Error: Solution incorrect.</div>
+		_END;
+		header("refresh:3; url=add_remove_problem_number_recognition.php");
+		}
+		if($place == "tens" && $digit !== $number[1]){
+			echo <<<_END
+			<br><br><br><br><br><br><br><br><br>
+			<div class="center_text">Error: Solution incorrect.</div>
+		_END;
+		header("refresh:3; url=add_remove_problem_number_recognition.php");
+		}
+		if($place == "hundreds" && $digit !== $number[0]){
+			echo <<<_END
+			<br><br><br><br><br><br><br><br><br>
+			<div class="center_text">Error: Solution incorrect.</div>
+		_END;
+		header("refresh:3; url=add_remove_problem_number_recognition.php");
+		}
+	}
+	elseif (strlen($number) == 2){
+		if($place == "hundreds"){
+			echo <<<_END
+			<br><br><br><br><br><br><br><br><br>
+			<div class="center_text">Error: Solution incorrect.</div>
+		_END;
+		header("refresh:3; url=add_remove_problem_number_recognition.php");
+		}
+		if($place == "ones" && $digit !== $number[1]){
+			echo <<<_END
+			<br><br><br><br><br><br><br><br><br>
+			<div class="center_text">Error: Solution incorrect.</div>
+		_END;
+		header("refresh:3; url=add_remove_problem_number_recognition.php");
+		}
+		if($place == "tens" && $digit !== $number[0]){
+			echo <<<_END
+			<br><br><br><br><br><br><br><br><br>
+			<div class="center_text">Error: Solution incorrect.</div>
+		_END;
+		header("refresh:3; url=add_remove_problem_number_recognition.php");
+		}
+	}
 	else {
 		//add the line to the contents of the file
 		echo <<<_END
