@@ -57,7 +57,7 @@
 
         #logout{
             position: relative;float:right;
-             padding:0px 10px;
+             padding:10px;
             /* margin: 0px 0px 0px 700px; */
         }
         a {
@@ -93,8 +93,7 @@
         }
 
         #logo{
-            padding: 0;
-            margin: 0;
+            padding-top:10px;
             height: 30px;
             display: inline-block;
         }

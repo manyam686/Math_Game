@@ -29,7 +29,7 @@
         font-weight: 800;
     }
     </style>
-    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br>
   <form action="add_remove_subtraction_DB.php" method="post" id="arinfo">
     <h2>Add/Remove Subtraction Problem</h2>
     <br>

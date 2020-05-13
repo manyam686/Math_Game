@@ -30,7 +30,7 @@
 		font-weight: 800;
     }
 	</style>
-	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br>
 	<form action="Number_Recognition_Add_Remove_Edit_DB.php" method="post" id="arinfo">
 		<h2>Add/Remove<br>Number Recognition Problem</h2>
 		<br>

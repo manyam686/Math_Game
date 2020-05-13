@@ -31,7 +31,7 @@
     }
 
     </style>
-    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
   <form action="add_remove_addition_DB.php" method="post" id="arinfo">
     <h2>Add/Remove Addition Problem</h2>
     <br>

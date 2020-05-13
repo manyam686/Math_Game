@@ -4,6 +4,8 @@
 	}
 	#button{
 		display: inline-block;
+		background-color: #236AB9;
+		margin-left: 10px;
 	}
 </style>
 
@@ -14,7 +16,10 @@
 	<div id="welcome">
 	<br>Welcome to addition game, $user
 	<br><br>Here are the rules:
-	<br>An addition problem will appear on the screen. Enter in the correct sum and you will get a question right, building the first part of your burger! Get ten question right to complete your delicious food!
+	<br>An addition problem will appear on the screen.
+	<br>Enter in the correct sum and you will get a question right, building the first part of your burger!
+	<br>Get ten question right to complete your delicious food!
+	<br><br>
 	</div>
 	_END;
 
@@ -28,6 +33,7 @@
 
 	if($_SESSION['user_type'] == "teacher"){
 			echo <<<_END
+			<br><br>
 			<li id ="button">
 					<a href="./add_remove_addition.php?user=$_SESSION[username]" class="link">Add or Remove a Problem</a>
 			</li>
