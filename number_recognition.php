@@ -12,7 +12,7 @@
 	$user = $_SESSION["username"];
 	echo <<<_END
 	<div id="welcome">
-	Welcome to number recognition game, $user
+	<br>Welcome to number recognition game, $user
 	<br><br>Here are the rules:
 	<br>A question will appear on the screen that will ask you to pick which place a specific digit is located within a number. Select the correct answer. Get five questions right to win the game!
 	</div>

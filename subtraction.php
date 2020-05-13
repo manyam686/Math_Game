@@ -12,7 +12,7 @@
 	$user = $_SESSION["username"];
 	echo <<<_END
 	<div id="welcome">
-	Welcome to subtraction game, $user
+	<br>Welcome to subtraction game, $user
 	<br><br>Here are the rules:
 	<br>A subtraction problem will appear on the screen. Enter in the correct difference and you will get a question right, building the first part of your burger! Get ten question right to complete your delicious food!
 	</div>

@@ -10,7 +10,7 @@
 	$user = $_SESSION["username"];
 	echo <<<_END
 	<div id="welcome">
-	Welcome to view student progress, $user
+	<br>Welcome to view student progress, $user
 	<br>Here is the progress of all students: <br><br>
 	</div>
 	_END;
