@@ -13,18 +13,21 @@
 		background-color:  #F7DAD4;
 	}
 	h2{
-		font-family: Impact;
+		font-family: Rockwell;
 		font-size: 50px;
+		font-weight: 800;
+		font-stretch: ultra-condensed;
 	}
 	.box{
 		width: 200px;
 		height: 30px;
-		font-family: Arial;
+		font-family: Rockwell;
 		font-size: 25px;
-		background-color: #236AB9;
+		background-color: #a7c3e3;
+		/*opacity: 0.5;*/
 	}
 	.label{
-		font-family: Arial;
+		font-family: Rockwell;
 		font-size: 25px;
 	}
 	#login_info{
@@ -34,6 +37,7 @@
 		background-color: #FD3A0F
 	}
 	</style>
+	<br><br><br><br><br><br>
 	<form action="check_login.php" method="post" id="login_info">
 		<h2>Welcome to Burger Math</h2>
 		<tag class="label">Username:</tag>

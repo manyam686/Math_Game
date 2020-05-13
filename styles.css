@@ -1,5 +1,5 @@
 .body_font{
-    font-family: Arial;
+    font-family: Rockwell;
     font-size: 25px;
 }
 
@@ -12,12 +12,12 @@
 
 .center_text{
 	text-align: center;
-    font-family: Arial;
+    font-family: Rockwell;
     font-size: 45px;
 }
 
 .label{
-    font-family: Arial;
+    font-family: Rockwell;
     font-size: 35px;
 }
 
@@ -47,6 +47,6 @@
 }
 
 #header{
-    font-family: Arial;
+    font-family: Rockwell;
     font-size: 45px;
 }
