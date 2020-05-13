@@ -1,5 +1,5 @@
 .body_font{
-    /*font-family: Rockwell;*/
+    font-family: Rockwell;
     font-size: 25px;
 }
 
@@ -12,12 +12,12 @@
 
 .center_text{
 	text-align: center;
-    /* font-family: Rockwell; */
+    font-family: Rockwell;
     font-size: 45px;
 }
 
 .label{
-    /* font-family: Rockwell; */
+    font-family: Rockwell;
     font-size: 35px;
 }
 
@@ -31,22 +31,22 @@
 	background-color:#FBA90A;
 	padding: 10px;
 	font-size: 25px;
-    /* font-family: Rockwell; */
+    font-family: Rockwell;
 }
 
 #textbox{
 	font-size: 25px;
-    /* font-family: Rockwell; */
+    font-family: Rockwell;
 	width: 100px;
 }
 
 #math_problem{
     text-align: center;
     font-size: 45px;
-    /* font-family: Rockwell; */
+    font-family: Rockwell;
 }
 
 #header{
-    /* font-family: Rockwell; */
+    font-family: Rockwell;
     font-size: 45px;
 }
